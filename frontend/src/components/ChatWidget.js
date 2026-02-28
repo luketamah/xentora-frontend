@@ -47,15 +47,17 @@ const ChatWidget = () => {
   return (
     <>
       {/* Chat Button */}
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full shadow-[0_0_30px_-5px_rgba(6,182,212,0.7)] flex items-center justify-center hover:scale-110 transition-transform"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        data-testid="chat-widget-btn"
-      >
-        <MessageCircle className="w-8 h-8 text-black" />
-      </motion.button>
+      {!isOpen && (
+        <motion.button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 z-[9999] w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full shadow-[0_0_30px_-5px_rgba(6,182,212,0.7)] flex items-center justify-center hover:scale-110 transition-transform"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          data-testid="chat-widget-btn"
+        >
+          <MessageCircle className="w-8 h-8 text-black" />
+        </motion.button>
+      )}
 
       {/* Chat Window */}
       <AnimatePresence>
@@ -64,7 +66,7 @@ const ChatWidget = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-50 w-[400px] max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-8rem)] bg-[#0B0F17] border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-6 right-6 z-[9999] w-[400px] max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-8rem)] bg-[#0B0F17] border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
             data-testid="chat-window"
           >
             {/* Header */}
