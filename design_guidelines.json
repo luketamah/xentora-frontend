@@ -1,0 +1,133 @@
+{
+  "identity": {
+    "name": "Xentora Solutions",
+    "persona": "E1: The Anti-AI Designer",
+    "vibe": "Electric Void",
+    "emotional_tone": "Authoritative, Futuristic, Automated, Precision",
+    "description": "A dark, tech-inspired sales automation platform that feels like a command center for the future of business."
+  },
+  "visual_language": {
+    "colors": {
+      "palette_name": "Deep Neon Tech",
+      "background": {
+        "default": "#02040A",
+        "paper": "#0B0F17",
+        "subtle": "#131825"
+      },
+      "primary": {
+        "default": "#00F0FF",
+        "foreground": "#000000",
+        "hover": "#00C2CC",
+        "glow": "0 0 20px -5px rgba(0, 240, 255, 0.5)"
+      },
+      "secondary": {
+        "default": "#7000FF",
+        "foreground": "#FFFFFF",
+        "hover": "#5A00CC"
+      },
+      "text": {
+        "primary": "#F8FAFC",
+        "secondary": "#94A3B8",
+        "muted": "#64748B"
+      },
+      "border": {
+        "default": "rgba(255, 255, 255, 0.1)",
+        "active": "rgba(0, 240, 255, 0.3)"
+      },
+      "status": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444"
+      }
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Outfit, sans-serif",
+        "body": "Manrope, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scaling": {
+        "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-none",
+        "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium tracking-normal",
+        "body": "text-base md:text-lg leading-relaxed text-slate-300"
+      },
+      "rules": "Headings must use Outfit. Body text uses Manrope. Never use Inter for headings."
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-12 lg:p-24",
+      "section_gap": "gap-16 md:gap-32",
+      "element_gap": "gap-6 md:gap-8"
+    },
+    "borders": {
+      "radius": {
+        "default": "rounded-xl",
+        "button": "rounded-lg",
+        "card": "rounded-2xl"
+      },
+      "width": "border",
+      "style": "border-white/10"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-cyan-400 text-black hover:bg-cyan-300 shadow-[0_0_20px_-5px_rgba(6,182,212,0.5)] transition-all duration-300 font-bold tracking-wide",
+      "secondary": "bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300",
+      "ghost": "text-slate-400 hover:text-cyan-400 hover:bg-transparent"
+    },
+    "cards": {
+      "glass": "bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl hover:border-cyan-500/30 transition-colors duration-300",
+      "solid": "bg-slate-950 border border-slate-800"
+    },
+    "inputs": {
+      "default": "bg-black/20 border-white/10 focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/20 text-white placeholder:text-slate-600 h-12"
+    },
+    "navigation": {
+      "container": "fixed top-0 w-full z-50 bg-black/50 backdrop-blur-lg border-b border-white/5",
+      "link": "text-sm font-medium text-slate-400 hover:text-white transition-colors uppercase tracking-widest"
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "hero": "Asymmetrical split. Text left (60%), 3D/Abstract Visual right (40%). Background: Deep Void with 'Twisting Blue Lines' overlay.",
+      "features": "Bento Grid (Mode A). Mix of 'Hero', 'Square', and 'Tall' cards. Dark glassmorphism.",
+      "how_it_works": "Step-based vertical timeline or horizontal scroll cards.",
+      "testimonials": "Masonry grid or infinite marquee."
+    },
+    "dashboard": {
+      "structure": "Sidebar navigation (fixed left). Top header (global actions). Main content area (scrollable).",
+      "grid": "High Density (Mode B). 'Trace Beam' borders for widgets. No card backgrounds—use borders only to define space.",
+      "tables": "Clean rows, border-b only. Hover row highlights. Status pills."
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1771793231925-25b44b91a469?q=80&w=2000&auto=format&fit=crop",
+      "feature_bg": "https://images.unsplash.com/photo-1762278804923-37f066f5e834?q=80&w=2000&auto=format&fit=crop",
+      "office_meeting": "https://images.unsplash.com/photo-1671722294182-ed01cbe66bd1?q=80&w=2000&auto=format&fit=crop",
+      "abstract_mesh": "https://images.unsplash.com/photo-1762279389083-abf71f22d338?q=80&w=2000&auto=format&fit=crop",
+      "logo_placeholder": "https://placehold.co/200x60/000000/FFFFFF/png?text=XENTORA"
+    },
+    "icons": "Lucide React (default). Use 'Cpu', 'Bot', 'Zap', 'Shield', 'BarChart3' for features."
+  },
+  "libraries": {
+    "motion": "framer-motion (use for staggered entrances and hover lifts)",
+    "charts": "recharts (via shadcn/ui charts)",
+    "toast": "sonner",
+    "forms": "react-hook-form + zod"
+  },
+  "universal_rules": [
+    "NEVER use generic full-screen gradients. Use 'spotlight' radial gradients instead.",
+    "Text contrast MUST meet WCAG AA. Slate-400 on Black is okay for labels, but use White for body.",
+    "Padding is luxury. Use p-8 where you think p-4 is enough.",
+    "Interactive elements MUST have a hover state that changes brightness or adds a glow.",
+    "All interactive elements MUST have data-testid attributes.",
+    "Do NOT use transparent backgrounds for dropdowns/modals. Use solid dark colors with borders.",
+    "Use 'Outfit' font for all Headings. Use 'Manrope' for all Body text."
+  ],
+  "instructions_to_main_agent": {
+    "setup": "Install 'lucide-react', 'framer-motion', 'recharts', 'clsx', 'tailwind-merge'. Ensure fonts are imported in index.css.",
+    "implementation_order": "1. Setup Global CSS/Fonts. 2. Build UI Components (Button, Input, Card). 3. Build Layout Shells. 4. Build Pages.",
+    "fonts_css": "@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Outfit:wght@400;500;700;900&family=JetBrains+Mono:wght@400&display=swap');"
+  }
+}
